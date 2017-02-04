@@ -2,9 +2,9 @@
 #include <locale.h>
 
 /*
-Написать рекурсивную функцию нахождения 
-наибольшего общего делителя двух целых
-чисел.
+ГЌГ ГЇГЁГ±Г ГІГј Г°ГҐГЄГіГ°Г±ГЁГўГ­ГіГѕ ГґГіГ­ГЄГ¶ГЁГѕ Г­Г ГµГ®Г¦Г¤ГҐГ­ГЁГї 
+Г­Г ГЁГЎГ®Г«ГјГёГҐГЈГ® Г®ГЎГ№ГҐГЈГ® Г¤ГҐГ«ГЁГІГҐГ«Гї Г¤ГўГіГµ Г¶ГҐГ«Г»Гµ
+Г·ГЁГ±ГҐГ«.
 */
 int obDel(int pervoeChislo, int vtoroeChislo);
 
@@ -13,11 +13,11 @@ int main()
 	setlocale(LC_ALL, "rus");
 	int pervoeChislo = 0;
 	int vtoroeChislo = 0;
-	printf("Введите первое число: \n");
+	printf("Г‚ГўГҐГ¤ГЁГІГҐ ГЇГҐГ°ГўГ®ГҐ Г·ГЁГ±Г«Г®: \n");
 	scanf("%i", &pervoeChislo);
-	printf("Введите второе число: \n");
+	printf("Г‚ГўГҐГ¤ГЁГІГҐ ГўГІГ®Г°Г®ГҐ Г·ГЁГ±Г«Г®: \n");
 	scanf("%i", &vtoroeChislo);
-	printf("Наибольший общий делитель двух чисел: %i\n", obDel(pervoeChislo, vtoroeChislo));
+	printf("ГЌГ ГЁГЎГ®Г«ГјГёГЁГ© Г®ГЎГ№ГЁГ© Г¤ГҐГ«ГЁГІГҐГ«Гј Г¤ГўГіГµ Г·ГЁГ±ГҐГ«: %i\n", obDel(pervoeChislo, vtoroeChislo));
 	
 	return 0;
 }
