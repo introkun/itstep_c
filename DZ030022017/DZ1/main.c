@@ -6,7 +6,7 @@
 наибольшего общего делителя двух целых
 чисел.
 */
-int obDel(int pervoeChislo, int vtoroeChislo);
+int greatestCommonDivisor(int pervoeChislo, int vtoroeChislo);
 
 int main()
 {
@@ -17,13 +17,13 @@ int main()
 	scanf("%i", &pervoeChislo);
 	printf("Введите второе число: \n");
 	scanf("%i", &vtoroeChislo);
-	printf("Наибольший общий делитель двух чисел: %i\n", obDel(pervoeChislo, vtoroeChislo));
+	printf("Наибольший общий делитель двух чисел: %i\n", greatestCommonDivisor(pervoeChislo, vtoroeChislo));
 	
 	return 0;
 }
 
 
-int obDel(int pervoeChislo, int vtoroeChislo)
+int greatestCommonDivisor(int pervoeChislo, int vtoroeChislo)
 {
 	if (vtoroeChislo == 0)
 	{
@@ -31,10 +31,10 @@ int obDel(int pervoeChislo, int vtoroeChislo)
 	}
 	if (pervoeChislo > vtoroeChislo)
 	{
-		return obDel(vtoroeChislo, pervoeChislo % vtoroeChislo);
+		return greatestCommonDivisor(vtoroeChislo, pervoeChislo % vtoroeChislo);
 	}
 	else
 	{
-		return obDel(pervoeChislo, vtoroeChislo % pervoeChislo);
+		return greatestCommonDivisor(pervoeChislo, vtoroeChislo % pervoeChislo);
 	}
 }
