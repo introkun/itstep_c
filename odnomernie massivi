@@ -11,18 +11,26 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 	float srednee = 0;
-	int temper[YEARS_COUNT];
+	float max = 0;	
+	float temper[YEARS_COUNT];
+
 	for (int i = 0; i < YEARS_COUNT; i++)
 	{
 		printf("Введите %i значение: \n", i + 1);
-		scanf("%i", &temper[i]);		
+		scanf("%f", &temper[i]);		
 	}
 
 	for (int i = 0; i < YEARS_COUNT; i++)
 	{		
 			srednee = srednee + temper[i];
+			if (max < temper[i])
+			{
+				max = temper[i];
+			}		
 	}
 	
 	printf("Среднее значение = %.2f \n", srednee / YEARS_COUNT);
+	printf("Максимальное значение = %.2f \n", max);
+	
 	return 0;
 }
