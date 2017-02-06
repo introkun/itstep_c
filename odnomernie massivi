@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <locale.h>
+#define YEARS_COUNT 7
+
+
+//Одномерные статические массивы
+
+
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	float srednee = 0;
+	int temper[YEARS_COUNT];
+	for (int i = 0; i < YEARS_COUNT; i++)
+	{
+		printf("Введите %i значение: \n", i + 1);
+		scanf("%i", &temper[i]);		
+	}
+
+	for (int i = 0; i < YEARS_COUNT; i++)
+	{		
+			srednee = srednee + temper[i];
+	}
+	
+	printf("Среднее значение = %.2f \n", srednee / YEARS_COUNT);
+	return 0;
+}
