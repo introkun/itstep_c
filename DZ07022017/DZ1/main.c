@@ -32,7 +32,9 @@ int main()
 			max = mass[i];
 		}
 		if (min > mass[i])
+		{
 			min = mass[i];
+		}
 	}
 
 	printf("Максимальное число = %i\n"
