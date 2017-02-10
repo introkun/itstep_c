@@ -12,7 +12,6 @@ void swap(int array[], int dlinaMassiva);
 void vivodMassiva(int array[], int dlinaMassiva);
 
 
-
 int main()
 {
 	setlocale(LC_ALL, "rus");
@@ -28,23 +27,16 @@ int main()
 	vivodMassiva(array, dlinaMassiva);	
 	bubleSort(array, dlinaMassiva);
 
-
 	return 0;
 }
 
 
-
-
 //Сортирует массив
-
 void bubleSort(int array[], int dlinaMassiva)
 {
 	swap(array, dlinaMassiva);
-
 	vivodMassiva(array, dlinaMassiva);
 }
-
-
 
 
 // Меняет значения местами
@@ -63,7 +55,6 @@ void swap(int array[], int dlinaMassiva)
 		}
 	}
 }
-
 
 
 //Выводит массив
