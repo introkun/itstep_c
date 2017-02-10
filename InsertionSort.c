@@ -22,7 +22,6 @@ int main()
 	}
 	printf("\n");
 
-
 	for (int i = 0; i < dlinaMassiva; i++)
 	{
 		int x = array[i];
@@ -34,7 +33,6 @@ int main()
 		}
 		array[j] = x;
 	}
-
 
 	for (int i = 0; i < dlinaMassiva; i++)
 	{		
