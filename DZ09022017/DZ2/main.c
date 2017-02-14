@@ -2,6 +2,7 @@
 #include <locale.h>
 #include <time.h>
 #include <stdlib.h>
+
 #define SIZE 10
 
 /*
@@ -13,6 +14,7 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 	srand(time(0));
+	// В задаче должно фигурировать 3 массива. Один исходный из 10 элементов и 2 результирующих по 5 элементов
 	int array[SIZE];
 
 	for (int i = 0; i < SIZE/2; i++)
