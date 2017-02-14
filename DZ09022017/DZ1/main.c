@@ -13,9 +13,9 @@
 • Произведение элементов с четными номерами
 */
 
-void vishitatSummuOtricatelnih(int array[], int dlinaMassiva);
-void proizvedenieElementov(int array[], int dlinaMassiva);
-void proizvedenieElementovChet(int array[], int dlinaMassiva);
+int vishitatSummuOtricatelnih(int array[], int dlinaMassiva);
+int proizvedenieElementov(int array[], int dlinaMassiva);
+int proizvedenieElementovChet(int array[], int dlinaMassiva);
 
 
 
@@ -25,20 +25,24 @@ int main()
 	srand(time(0));
 	int array[N];
 	int dlinaMassiva = N;
+	// Можно вынести в функцию
 	for (int i = 0; i < N; i++)
 	{
 		array[i] = -5 + rand() % 10;
 		printf("%i,  ", array[i]);
 	}
 	printf("\n");
-	vishitatSummuOtricatelnih(array, dlinaMassiva);
-	proizvedenieElementov(array, dlinaMassiva);
-	proizvedenieElementovChet(array, dlinaMassiva);
+	int const summ = vishitatSummuOtricatelnih(array, dlinaMassiva);
+	printf("Сумма отрицательных элементов = %i\n", summ);
+	int const proizvedenie = proizvedenieElementov(array, dlinaMassiva);
+	printf("Произведение элементов  между минимальным и максимальным значением = %i\n", proizvedenie);
+	int const proizvedenie = proizvedenieElementovChet(array, dlinaMassiva);
+	printf("Произведение чётных элементов = %i\n", proizvedenie);
 	
 	return 0;
 }
 
-void vishitatSummuOtricatelnih(int array[], int dlinaMassiva)
+int vishitatSummuOtricatelnih(int array[], int dlinaMassiva)
 {
 
 	int count = 0;
@@ -49,11 +53,11 @@ void vishitatSummuOtricatelnih(int array[], int dlinaMassiva)
 			count = count + array[i];
 		}
 	}
-	printf("Сумма отрицательных элементов = %i\n", count);
+	return count;
 }
 
 
-void proizvedenieElementov(int array[], int dlinaMassiva)
+int proizvedenieElementov(int array[], int dlinaMassiva)
 {
 	int max;
 	int min;
@@ -79,10 +83,10 @@ void proizvedenieElementov(int array[], int dlinaMassiva)
 			proizvedenie = proizvedenie * array[i];
 		}
 	}
-	printf("Произведение элементов  между минимальным и максимальным значением = %i\n", proizvedenie);
+	return proizvedenie;
 }
 
-void proizvedenieElementovChet(int array[], int dlinaMassiva)
+int proizvedenieElementovChet(int array[], int dlinaMassiva)
 {
 	
 	int proizvedenie = 1;
@@ -95,6 +99,6 @@ void proizvedenieElementovChet(int array[], int dlinaMassiva)
 			proizvedenie = proizvedenie * array[i];
 		}
 	}
-	printf("Произведение чётных элементов = %i\n", proizvedenie);
+	return proizvedenie;
 }
 
